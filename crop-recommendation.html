@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Recommendation - Smart Farming</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/crop-recommendation.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Smart<span>Farm</span></h1>
+        </div>
+        <nav>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="soil-info.html">Soil Info</a></li>
+            <li>
+              <a href="crop-recommendation.html" class="active">Crop Guide</a>
+            </li>
+            <li><a href="farm-planner.html">Farm Planner</a></li>
+            <li class="dropdown">
+              <a href="#">More <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="government-schemes.html">Govt. Schemes</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <h1>Crop Recommendation</h1>
+        <p>
+          Get personalized crop suggestions based on your region, soil type, and
+          season
+        </p>
+      </div>
+    </section>
+
+    <!-- Recommendation Form Section -->
+    <section class="recommendation-form">
+      <div class="container">
+        <div class="form-container">
+          <h2>Find the Best Crop for Your Farm</h2>
+          <form id="cropForm">
+            <div class="form-group">
+              <label for="region">Select Region</label>
+              <select id="region" required>
+                <option value="" disabled selected>Choose your region</option>
+                <option value="north">North India</option>
+                <option value="south">South India</option>
+                <option value="east">East India</option>
+                <option value="west">West India</option>
+                <option value="central">Central India</option>
+                <option value="northeast">North-East India</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="soilType">Soil Type</label>
+              <select id="soilType" required>
+                <option value="" disabled selected>Select soil type</option>
+                <option value="alluvial">Alluvial Soil</option>
+                <option value="black">Black Soil</option>
+                <option value="red">Red Soil</option>
+                <option value="laterite">Laterite Soil</option>
+                <option value="arid">Arid Soil</option>
+                <option value="forest">Forest Soil</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="month">Planting Month</label>
+              <select id="month" required>
+                <option value="" disabled selected>Select month</option>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Get Recommendations
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="resultsSection" style="display: none">
+      <div class="container">
+        <div class="results-container">
+          <div class="recommended-crops">
+            <h2>Recommended Crops</h2>
+            <div class="crop-cards" id="cropCards">
+              <!-- Crop cards will be added dynamically via JavaScript -->
+            </div>
+          </div>
+
+          <div class="crop-calendar">
+            <h2>Crop Calendar</h2>
+            <div class="selected-crop">
+              <h3>Selected Crop: <span id="selectedCropName">Rice</span></h3>
+            </div>
+
+            <div class="calendar-container">
+              <div class="calendar-header">
+                <div class="month-selector">
+                  <button id="prevMonth" class="month-nav">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <h3 id="currentMonth">January 2023</h3>
+                  <button id="nextMonth" class="month-nav">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="calendar-grid">
+                <div class="calendar-days">
+                  <div class="day-header">Sun</div>
+                  <div class="day-header">Mon</div>
+                  <div class="day-header">Tue</div>
+                  <div class="day-header">Wed</div>
+                  <div class="day-header">Thu</div>
+                  <div class="day-header">Fri</div>
+                  <div class="day-header">Sat</div>
+                </div>
+
+                <div class="calendar-dates" id="calendarDates">
+                  <!-- Calendar dates will be added dynamically via JavaScript -->
+                </div>
+              </div>
+            </div>
+
+            <div class="task-list">
+              <h3>Monthly Plan</h3>
+              <div class="tasks" id="taskList">
+                <!-- Tasks will be added dynamically via JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Crop Information Section -->
+    <section class="crop-info">
+      <div class="container">
+        <h2 class="section-title">Popular Crops in India</h2>
+        <div class="crop-info-grid">
+          <div class="crop-info-card">
+            <div class="crop-image">
+              <img src="images/rice.jpg" alt="Rice" />
+            </div>
+            <div class="crop-details">
+              <h3>Rice</h3>
+              <p><strong>Growing Season:</strong> Kharif (June-July)</p>
+              <p><strong>Regions:</strong> East & South India</p>
+              <p><strong>Soil Type:</strong> Alluvial, Clayey</p>
+              <a href="#" class="read-more"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="crop-info-card">
+            <div class="crop-image">
+              <img src="images/wheat.jpg" alt="Wheat" />
+            </div>
+            <div class="crop-details">
+              <h3>Wheat</h3>
+              <p><strong>Growing Season:</strong> Rabi (Oct-Nov)</p>
+              <p><strong>Regions:</strong> North & Central India</p>
+              <p><strong>Soil Type:</strong> Loamy, Alluvial</p>
+              <a href="#" class="read-more"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="crop-info-card">
+            <div class="crop-image">
+              <img src="images/cotton.jpg" alt="Cotton" />
+            </div>
+            <div class="crop-details">
+              <h3>Cotton</h3>
+              <p><strong>Growing Season:</strong> Kharif (May-June)</p>
+              <p><strong>Regions:</strong> West & Central India</p>
+              <p><strong>Soil Type:</strong> Black, Alluvial</p>
+              <a href="#" class="read-more"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="crop-info-card">
+            <div class="crop-image">
+              <img src="images/sugarcane.jpg" alt="Sugarcane" />
+            </div>
+            <div class="crop-details">
+              <h3>Sugarcane</h3>
+              <p><strong>Growing Season:</strong> Year-round</p>
+              <p><strong>Regions:</strong> North & South India</p>
+              <p><strong>Soil Type:</strong> Loamy, Alluvial</p>
+              <a href="#" class="read-more"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Smart<span>Farm</span></h2>
+            <p>
+              Empowering farmers with technology and knowledge for sustainable
+              agriculture
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="weather.html">Weather</a></li>
+              <li><a href="soil-info.html">Soil Info</a></li>
+              <li><a href="crop-recommendation.html">Crop Guide</a></li>
+              <li><a href="farm-planner.html">Farm Planner</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-resources">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="government-schemes.html">Government Schemes</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@smartfarm.in</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 SmartFarm. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/crop-recommendation.js"></script>
+  </body>
+</html>

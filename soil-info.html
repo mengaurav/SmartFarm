@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soil Information - Smart Farming</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/soil-info.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Smart<span>Farm</span></h1>
+        </div>
+        <nav>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="soil-info.html" class="active">Soil Info</a></li>
+            <li><a href="crop-recommendation.html">Crop Guide</a></li>
+            <li><a href="farm-planner.html">Farm Planner</a></li>
+            <li class="dropdown">
+              <a href="#">More <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="government-schemes.html">Govt. Schemes</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section
+      class="page-banner"
+      style="
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80')
+            no-repeat center center/cover;
+        color: #fff;
+        padding: 80px 0;
+        text-align: center;
+      "
+    >
+      <div class="container">
+        <h1>Soil Information</h1>
+        <p>
+          Learn about different soil types, their properties, and how to care
+          for your land for better farming.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section class="blog-preview">
+      <div class="container">
+        <h2 class="section-title">Soil & Farming Blog</h2>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80"
+                alt="Soil Health"
+              />
+            </div>
+            <div class="blog-content">
+              <h3>Improving Soil Health</h3>
+              <p>
+                Discover practical tips to boost soil fertility and structure
+                for better crop yields.
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80"
+                alt="Organic Matter"
+              />
+            </div>
+            <div class="blog-content">
+              <h3>The Role of Organic Matter</h3>
+              <p>
+                Learn how compost and green manure can transform your soil and
+                support healthy crops.
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80"
+                alt="Soil Testing"
+              />
+            </div>
+            <div class="blog-content">
+              <h3>Soil Testing for Success</h3>
+              <p>
+                Find out why regular soil testing is key to sustainable and
+                profitable farming.
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="view-all">
+          <a href="#" class="btn btn-outline">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Region Selector Section -->
+    <section class="region-selector">
+      <div class="container">
+        <h2 class="section-title">Find Soil Types by Region</h2>
+        <div class="region-form">
+          <div class="form-group">
+            <label for="regionSelect">Select Region</label>
+            <select id="regionSelect">
+              <option value="" selected disabled>Choose a region</option>
+              <option value="north">North India</option>
+              <option value="south">South India</option>
+              <option value="east">East India</option>
+              <option value="west">West India</option>
+              <option value="central">Central India</option>
+              <option value="northeast">North-East India</option>
+            </select>
+          </div>
+          <div class="region-result" id="regionResult">
+            <p>Select a region to see common soil types</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soil Types Section -->
+    <section class="soil-types">
+      <div class="container">
+        <h2 class="section-title">Major Soil Types in India</h2>
+        <div class="soil-cards">
+          <!-- Alluvial Soil -->
+          <div class="soil-card">
+            <div class="soil-image">
+              <img src="images/alluvial-soil.jpg" alt="Alluvial Soil" />
+            </div>
+            <div class="soil-content">
+              <h3>Alluvial Soil</h3>
+              <div class="soil-properties">
+                <div class="property">
+                  <span class="property-label">pH Level:</span>
+                  <span class="property-value">6.5 - 8.0</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Texture:</span>
+                  <span class="property-value">Loamy to Sandy Loam</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Fertility:</span>
+                  <span class="property-value">High</span>
+                </div>
+              </div>
+              <p>
+                Alluvial soil is formed by the deposition of sediments by
+                rivers. It is rich in potash, phosphoric acid, and lime, making
+                it ideal for agriculture. This soil type covers about 40% of
+                India's land area.
+              </p>
+              <div class="soil-regions">
+                <h4>Regions:</h4>
+                <p>Indo-Gangetic Plains, Brahmaputra Valley, Coastal Plains</p>
+              </div>
+              <div class="suitable-crops">
+                <h4>Suitable Crops:</h4>
+                <p>Rice, Wheat, Sugarcane, Maize, Pulses, Oilseeds</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Black Soil -->
+          <div class="soil-card">
+            <div class="soil-image">
+              <img src="images/black-soil.jpg" alt="Black Soil" />
+            </div>
+            <div class="soil-content">
+              <h3>Black Soil (Regur)</h3>
+              <div class="soil-properties">
+                <div class="property">
+                  <span class="property-label">pH Level:</span>
+                  <span class="property-value">7.5 - 8.5</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Texture:</span>
+                  <span class="property-value">Clayey</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Fertility:</span>
+                  <span class="property-value">Medium to High</span>
+                </div>
+              </div>
+              <p>
+                Black soil is rich in calcium, potassium, and magnesium but poor
+                in nitrogen and phosphorus. It has a high water retention
+                capacity and expands when wet and contracts when dry, forming
+                deep cracks.
+              </p>
+              <div class="soil-regions">
+                <h4>Regions:</h4>
+                <p>Deccan Plateau, Maharashtra, Gujarat, Madhya Pradesh</p>
+              </div>
+              <div class="suitable-crops">
+                <h4>Suitable Crops:</h4>
+                <p>Cotton, Sugarcane, Jowar, Wheat, Linseed, Sunflower</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Red Soil -->
+          <div class="soil-card">
+            <div class="soil-image">
+              <img src="images/red-soil.jpg" alt="Red Soil" />
+            </div>
+            <div class="soil-content">
+              <h3>Red Soil</h3>
+              <div class="soil-properties">
+                <div class="property">
+                  <span class="property-label">pH Level:</span>
+                  <span class="property-value">5.5 - 6.5</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Texture:</span>
+                  <span class="property-value">Sandy to Loamy</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Fertility:</span>
+                  <span class="property-value">Low to Medium</span>
+                </div>
+              </div>
+              <p>
+                Red soil gets its color from iron oxide. It is generally
+                deficient in nitrogen, phosphorus, and humus but rich in potash.
+                The soil is porous with good drainage properties.
+              </p>
+              <div class="soil-regions">
+                <h4>Regions:</h4>
+                <p>
+                  Tamil Nadu, Karnataka, Andhra Pradesh, Telangana, Eastern
+                  Odisha
+                </p>
+              </div>
+              <div class="suitable-crops">
+                <h4>Suitable Crops:</h4>
+                <p>
+                  Millets, Groundnut, Pulses, Tobacco, Potato, Rice (with
+                  irrigation)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Laterite Soil -->
+          <div class="soil-card">
+            <div class="soil-image">
+              <img src="images/laterite-soil.jpg" alt="Laterite Soil" />
+            </div>
+            <div class="soil-content">
+              <h3>Laterite Soil</h3>
+              <div class="soil-properties">
+                <div class="property">
+                  <span class="property-label">pH Level:</span>
+                  <span class="property-value">4.5 - 6.0</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Texture:</span>
+                  <span class="property-value">Coarse</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Fertility:</span>
+                  <span class="property-value">Low</span>
+                </div>
+              </div>
+              <p>
+                Laterite soil is formed in tropical regions with high rainfall
+                and temperature. It is rich in iron and aluminum but poor in
+                nitrogen, potash, and organic matter. The soil becomes hard when
+                dry.
+              </p>
+              <div class="soil-regions">
+                <h4>Regions:</h4>
+                <p>Western Ghats, Kerala, Karnataka, Eastern Ghats, Assam</p>
+              </div>
+              <div class="suitable-crops">
+                <h4>Suitable Crops:</h4>
+                <p>Tea, Coffee, Rubber, Cashew, Coconut, Tapioca</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arid Soil -->
+          <div class="soil-card">
+            <div class="soil-image">
+              <img src="images/arid-soil.jpg" alt="Arid Soil" />
+            </div>
+            <div class="soil-content">
+              <h3>Arid Soil</h3>
+              <div class="soil-properties">
+                <div class="property">
+                  <span class="property-label">pH Level:</span>
+                  <span class="property-value">7.5 - 8.7</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Texture:</span>
+                  <span class="property-value">Sandy</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Fertility:</span>
+                  <span class="property-value">Very Low</span>
+                </div>
+              </div>
+              <p>
+                Arid soil is found in dry regions with high evaporation and low
+                rainfall. It contains a high percentage of soluble salts but is
+                deficient in organic matter and moisture. The soil is generally
+                alkaline.
+              </p>
+              <div class="soil-regions">
+                <h4>Regions:</h4>
+                <p>Rajasthan, Western Gujarat, Parts of Punjab and Haryana</p>
+              </div>
+              <div class="suitable-crops">
+                <h4>Suitable Crops:</h4>
+                <p>
+                  Millets, Barley, Cotton, Maize (with irrigation), Date Palm
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Forest Soil -->
+          <div class="soil-card">
+            <div class="soil-image">
+              <img src="images/forest-soil.jpg" alt="Forest Soil" />
+            </div>
+            <div class="soil-content">
+              <h3>Forest Soil</h3>
+              <div class="soil-properties">
+                <div class="property">
+                  <span class="property-label">pH Level:</span>
+                  <span class="property-value">5.0 - 6.5</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Texture:</span>
+                  <span class="property-value">Loamy</span>
+                </div>
+                <div class="property">
+                  <span class="property-label">Fertility:</span>
+                  <span class="property-value">Medium to High</span>
+                </div>
+              </div>
+              <p>
+                Forest soil is formed under forest cover and is rich in organic
+                matter due to the decomposition of leaves and vegetation. It is
+                generally acidic in nature and varies in depth depending on the
+                topography.
+              </p>
+              <div class="soil-regions">
+                <h4>Regions:</h4>
+                <p>
+                  Himalayan Region, Western and Eastern Ghats, Forested areas of
+                  Madhya Pradesh
+                </p>
+              </div>
+              <div class="suitable-crops">
+                <h4>Suitable Crops:</h4>
+                <p>Tea, Coffee, Spices, Fruits, Vegetables, Medicinal Plants</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soil Care Tips Section -->
+    <section class="soil-care">
+      <div class="container">
+        <h2 class="section-title">Soil Care Tips</h2>
+        <div class="care-tips-container">
+          <div class="care-tips">
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="fas fa-vial"></i>
+              </div>
+              <div class="tip-content">
+                <h3>pH Balance</h3>
+                <p>
+                  Maintain proper pH levels for optimal nutrient availability.
+                  Most crops prefer a pH between 6.0 and 7.0. Test your soil
+                  regularly and use lime to raise pH or sulfur to lower it as
+                  needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="tip-content">
+                <h3>Organic Matter</h3>
+                <p>
+                  Increase organic matter by adding compost, manure, or green
+                  manures. Organic matter improves soil structure, water
+                  retention, and provides nutrients for plants and beneficial
+                  soil organisms.
+                </p>
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="fas fa-water"></i>
+              </div>
+              <div class="tip-content">
+                <h3>Water Management</h3>
+                <p>
+                  Implement proper irrigation practices to prevent waterlogging
+                  or drought stress. Use mulch to conserve moisture and reduce
+                  evaporation. Consider drip irrigation for efficient water use.
+                </p>
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+              <div class="tip-content">
+                <h3>Crop Rotation</h3>
+                <p>
+                  Practice crop rotation to prevent nutrient depletion and
+                  reduce pest and disease buildup. Include legumes in your
+                  rotation to fix nitrogen in the soil naturally.
+                </p>
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <div class="tip-content">
+                <h3>Cover Crops</h3>
+                <p>
+                  Plant cover crops during fallow periods to prevent soil
+                  erosion, suppress weeds, and add organic matter. Common cover
+                  crops include clover, vetch, and rye.
+                </p>
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="fas fa-tractor"></i>
+              </div>
+              <div class="tip-content">
+                <h3>Minimal Tillage</h3>
+                <p>
+                  Reduce tillage to preserve soil structure and beneficial
+                  organisms. Excessive tillage can lead to soil compaction,
+                  erosion, and loss of organic matter.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="soil-testing">
+            <h3>Importance of Soil Testing</h3>
+            <p>
+              Regular soil testing helps you understand your soil's nutrient
+              levels, pH, and organic matter content. This information allows
+              you to make informed decisions about fertilization and soil
+              amendments.
+            </p>
+            <div class="testing-steps">
+              <h4>How to Collect Soil Samples:</h4>
+              <ol>
+                <li>
+                  Use clean tools to collect samples from 5-10 different spots
+                  in your field.
+                </li>
+                <li>
+                  Dig 6-8 inches deep for most crops (3-4 inches for lawns).
+                </li>
+                <li>Remove plant debris and stones from the samples.</li>
+                <li>Mix the samples thoroughly in a clean container.</li>
+                <li>Take about 500g of the mixed soil for testing.</li>
+                <li>
+                  Submit to your local agricultural extension office or soil
+                  testing lab.
+                </li>
+              </ol>
+              <p>
+                For best results, test your soil every 2-3 years or when
+                changing crops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Smart<span>Farm</span></h2>
+            <p>
+              Empowering farmers with technology and knowledge for sustainable
+              agriculture
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="weather.html">Weather</a></li>
+              <li><a href="soil-info.html">Soil Info</a></li>
+              <li><a href="crop-recommendation.html">Crop Guide</a></li>
+              <li><a href="farm-planner.html">Farm Planner</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-resources">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="government-schemes.html">Government Schemes</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@smartfarm.in</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 SmartFarm. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/soil-info.js"></script>
+  </body>
+</html>

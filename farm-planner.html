@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farm Planner - Smart Farming</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/farm-planner.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Smart<span>Farm</span></h1>
+        </div>
+        <nav>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="soil-info.html">Soil Info</a></li>
+            <li><a href="crop-recommendation.html">Crop Guide</a></li>
+            <li><a href="farm-planner.html" class="active">Farm Planner</a></li>
+            <li class="dropdown">
+              <a href="#">More <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="government-schemes.html">Govt. Schemes</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <h1>Farm Planner</h1>
+        <p>
+          Plan, organize, and track your farming activities throughout the
+          season
+        </p>
+      </div>
+    </section>
+
+    <!-- Farm Planner Section -->
+    <section class="farm-planner-section">
+      <div class="container">
+        <div class="planner-container">
+          <div class="planner-sidebar">
+            <div class="add-crop-form">
+              <h2>Add New Crop</h2>
+              <form id="addCropForm">
+                <div class="form-group">
+                  <label for="cropName">Crop Name</label>
+                  <input
+                    type="text"
+                    id="cropName"
+                    placeholder="e.g. Rice, Wheat, Cotton"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="plantingDate">Planting Date</label>
+                  <input type="date" id="plantingDate" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="fieldLocation">Field Location/Name</label>
+                  <input
+                    type="text"
+                    id="fieldLocation"
+                    placeholder="e.g. North Field, Plot 3"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="cropNotes">Notes</label>
+                  <textarea
+                    id="cropNotes"
+                    placeholder="Additional information about this crop"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Add to Planner
+                </button>
+              </form>
+            </div>
+
+            <div class="upcoming-tasks">
+              <h2>Upcoming Tasks</h2>
+              <div id="taskNotifications" class="task-notifications">
+                <!-- Task notifications will be added dynamically via JavaScript -->
+                <div class="no-tasks-message">No upcoming tasks</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="planner-main">
+            <div class="planner-header">
+              <h2>My Farm Calendar</h2>
+              <div class="planner-controls">
+                <div class="month-selector">
+                  <button id="prevMonth" class="month-nav">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <h3 id="currentMonth">January 2023</h3>
+                  <button id="nextMonth" class="month-nav">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+                <div class="view-selector">
+                  <button class="view-btn active" data-view="calendar">
+                    Calendar
+                  </button>
+                  <button class="view-btn" data-view="list">List</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="calendar-view" id="calendarView">
+              <div class="calendar-grid">
+                <div class="calendar-days">
+                  <div class="day-header">Sun</div>
+                  <div class="day-header">Mon</div>
+                  <div class="day-header">Tue</div>
+                  <div class="day-header">Wed</div>
+                  <div class="day-header">Thu</div>
+                  <div class="day-header">Fri</div>
+                  <div class="day-header">Sat</div>
+                </div>
+
+                <div class="calendar-dates" id="calendarDates">
+                  <!-- Calendar dates will be added dynamically via JavaScript -->
+                </div>
+              </div>
+            </div>
+
+            <div class="list-view" id="listView" style="display: none">
+              <div class="list-header">
+                <div class="list-col crop-col">Crop</div>
+                <div class="list-col date-col">Planting Date</div>
+                <div class="list-col location-col">Location</div>
+                <div class="list-col status-col">Status</div>
+                <div class="list-col actions-col">Actions</div>
+              </div>
+
+              <div class="list-body" id="cropListBody">
+                <!-- Crop list items will be added dynamically via JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task Details Modal -->
+    <div class="modal" id="taskModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modalTitle">Task Details</h2>
+        <div id="modalContent" class="modal-body">
+          <!-- Task details will be added dynamically via JavaScript -->
+        </div>
+        <div class="modal-footer">
+          <button id="completeTaskBtn" class="btn btn-primary">
+            Mark as Complete
+          </button>
+          <button id="closeModalBtn" class="btn btn-secondary">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div class="modal" id="addTaskModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Add New Task</h2>
+        <form id="addTaskForm" class="modal-body">
+          <input type="hidden" id="taskDate" />
+          <div class="form-group">
+            <label for="taskCrop">Select Crop</label>
+            <select id="taskCrop" required>
+              <!-- Crop options will be added dynamically via JavaScript -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="taskName">Task Name</label>
+            <input
+              type="text"
+              id="taskName"
+              placeholder="e.g. Irrigation, Fertilizer Application"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="taskDescription">Description</label>
+            <textarea
+              id="taskDescription"
+              placeholder="Task details"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="taskPriority">Priority</label>
+            <select id="taskPriority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+        </form>
+        <div class="modal-footer">
+          <button id="saveTaskBtn" class="btn btn-primary">Save Task</button>
+          <button id="cancelTaskBtn" class="btn btn-secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Crop Details Modal -->
+    <div class="modal" id="cropDetailsModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="cropModalTitle">Crop Details</h2>
+        <div id="cropModalContent" class="modal-body">
+          <!-- Crop details will be added dynamically via JavaScript -->
+        </div>
+        <div class="modal-footer">
+          <button id="editCropBtn" class="btn btn-primary">Edit</button>
+          <button id="deleteCropBtn" class="btn btn-danger">Delete</button>
+          <button id="closeCropModalBtn" class="btn btn-secondary">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Badge -->
+    <div class="notification-badge" id="notificationBadge">
+      <span id="notificationCount">0</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Smart<span>Farm</span></h2>
+            <p>
+              Empowering farmers with technology and knowledge for sustainable
+              agriculture
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="weather.html">Weather</a></li>
+              <li><a href="soil-info.html">Soil Info</a></li>
+              <li><a href="crop-recommendation.html">Crop Guide</a></li>
+              <li><a href="farm-planner.html">Farm Planner</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-resources">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="government-schemes.html">Government Schemes</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@smartfarm.in</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 SmartFarm. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/farm-planner.js"></script>
+  </body>
+</html>

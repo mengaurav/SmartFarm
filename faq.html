@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Smart Farming</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Smart<span>Farm</span></h1>
+        </div>
+        <nav>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="soil-info.html">Soil Info</a></li>
+            <li><a href="crop-recommendation.html">Crop Guide</a></li>
+            <li><a href="farm-planner.html">Farm Planner</a></li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                >More <i class="fas fa-chevron-down"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="government-schemes.html">Govt. Schemes</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p>
+          Find answers to common questions about Smart Farming platform and
+          services
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Search Section -->
+    <section class="faq-search">
+      <div class="container">
+        <div class="search-container">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="faqSearch"
+            placeholder="Search for questions..."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Categories Section -->
+    <section class="faq-categories">
+      <div class="container">
+        <div class="category-tabs">
+          <button class="category-tab active" data-category="all">
+            All Questions
+          </button>
+          <button class="category-tab" data-category="general">General</button>
+          <button class="category-tab" data-category="weather">Weather</button>
+          <button class="category-tab" data-category="crops">Crops</button>
+          <button class="category-tab" data-category="planner">
+            Farm Planner
+          </button>
+          <button class="category-tab" data-category="schemes">
+            Govt. Schemes
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Questions Section -->
+    <section class="faq-questions">
+      <div class="container">
+        <div class="accordion-container">
+          <!-- General FAQs -->
+          <div class="faq-category" data-category="general">
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>What is Smart Farming?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Smart Farming is a comprehensive platform designed to help
+                  Indian farmers make informed decisions using technology. It
+                  provides weather forecasts, crop recommendations, soil
+                  information, farm planning tools, market prices, and
+                  information about government schemes - all in one place. Our
+                  goal is to empower farmers with knowledge and tools to
+                  increase productivity and profitability.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Is Smart Farming free to use?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, Smart Farming is completely free to use. We believe in
+                  making agricultural information and technology accessible to
+                  all farmers. There are no subscription fees or hidden charges
+                  for using our platform.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Do I need to create an account to use Smart Farming?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  No, you don't need to create an account to access most
+                  features of Smart Farming. However, creating an account allows
+                  you to save your farm data, receive personalized
+                  recommendations, and access additional features like saving
+                  your farm plans and getting customized alerts.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Is my data secure on Smart Farming?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, we take data security very seriously. All your personal
+                  information and farm data are encrypted and stored securely.
+                  We do not share your information with third parties without
+                  your consent. You can read our detailed privacy policy to
+                  learn more about how we protect your data.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>How can I contact Smart Farming support?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  You can contact our support team through multiple channels:
+                </p>
+                <ul>
+                  <li>Email: support@smartfarm.in</li>
+                  <li>
+                    Phone: +91 98765 43210 (9 AM to 6 PM, Monday to Saturday)
+                  </li>
+                  <li>WhatsApp: +91 98765 43210</li>
+                  <li>
+                    Contact Form: Visit our
+                    <a href="contact.html">Contact page</a> and fill out the
+                    form
+                  </li>
+                </ul>
+                <p>We typically respond within 24 hours on working days.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weather FAQs -->
+          <div class="faq-category" data-category="weather">
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>How accurate are the weather forecasts?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Our weather forecasts are sourced from reliable meteorological
+                  services and have an accuracy rate of approximately 85-90% for
+                  1-3 day forecasts. The accuracy decreases slightly for
+                  longer-term forecasts (4-7 days). We update our weather data
+                  every 3 hours to provide you with the most current information
+                  available.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Can I get weather alerts for my specific location?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, you can set up weather alerts for your specific location.
+                  To do this, you need to create an account, add your farm
+                  location, and enable weather alerts in your profile settings.
+                  You can choose to receive alerts for extreme weather
+                  conditions, rainfall, temperature changes, and more.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>How do I interpret the farming tips based on weather?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Our farming tips are generated based on current and forecasted
+                  weather conditions for your location. These tips provide
+                  practical advice on:
+                </p>
+                <ul>
+                  <li>When to irrigate your crops</li>
+                  <li>Optimal times for fertilizer application</li>
+                  <li>Pest and disease risks based on weather conditions</li>
+                  <li>Harvesting recommendations</li>
+                  <li>Precautionary measures for extreme weather</li>
+                </ul>
+                <p>
+                  The tips are customized based on the crops you're growing and
+                  the current growth stage.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Does the weather forecast work for remote rural areas?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, our weather forecast system covers all of India,
+                  including remote rural areas. We use a combination of
+                  satellite data, weather stations, and advanced meteorological
+                  models to provide forecasts for even the most remote
+                  locations. The accuracy may vary slightly depending on the
+                  proximity to weather stations, but we strive to provide
+                  reliable forecasts for all areas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Crops FAQs -->
+          <div class="faq-category" data-category="crops">
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>How are crop recommendations generated?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Our crop recommendations are generated using a comprehensive
+                  algorithm that considers multiple factors:
+                </p>
+                <ul>
+                  <li>Soil type and soil health parameters</li>
+                  <li>Regional climate and seasonal weather patterns</li>
+                  <li>Water availability</li>
+                  <li>Historical crop performance in your region</li>
+                  <li>Market demand and price trends</li>
+                </ul>
+                <p>
+                  The system analyzes these factors to suggest crops that are
+                  most likely to thrive in your specific conditions and provide
+                  good returns.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>
+                  Are the fertilizer recommendations customized for my farm?
+                </h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, our fertilizer recommendations are customized based on:
+                </p>
+                <ul>
+                  <li>The specific crop you're growing</li>
+                  <li>Your soil type and its nutrient profile</li>
+                  <li>The size of your farm</li>
+                  <li>The growth stage of your crop</li>
+                </ul>
+                <p>
+                  For the most accurate recommendations, we encourage you to
+                  upload your soil test results if available. This allows us to
+                  provide precise nutrient recommendations based on your soil's
+                  actual nutrient levels.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>How many crops does your database cover?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Our database currently covers over 100 crops commonly grown in
+                  India, including:
+                </p>
+                <ul>
+                  <li>Cereals: Rice, wheat, maize, jowar, bajra, etc.</li>
+                  <li>
+                    Pulses: Chickpea, pigeon pea, green gram, black gram, etc.
+                  </li>
+                  <li>
+                    Oilseeds: Groundnut, mustard, soybean, sunflower, etc.
+                  </li>
+                  <li>
+                    Vegetables: Potato, onion, tomato, okra, brinjal, etc.
+                  </li>
+                  <li>Fruits: Mango, banana, citrus, apple, grapes, etc.</li>
+                  <li>
+                    Commercial crops: Cotton, sugarcane, jute, tobacco, etc.
+                  </li>
+                  <li>Spices: Turmeric, chilli, coriander, cumin, etc.</li>
+                </ul>
+                <p>
+                  We regularly update our database to include more crops and
+                  varieties.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Can I get information about organic farming practices?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, Smart Farming provides comprehensive information about
+                  organic farming practices. You can find details about:
+                </p>
+                <ul>
+                  <li>Organic fertilizers and their application</li>
+                  <li>Natural pest control methods</li>
+                  <li>Crop rotation and intercropping for organic systems</li>
+                  <li>Organic certification process</li>
+                  <li>Marketing organic produce</li>
+                </ul>
+                <p>
+                  In our fertilizer guide, you can specifically filter for
+                  organic options, and in the crop management section, you can
+                  select organic farming practices to get tailored advice.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Farm Planner FAQs -->
+          <div class="faq-category" data-category="planner">
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>How do I use the Farm Planner tool?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>Using the Farm Planner tool is simple:</p>
+                <ol>
+                  <li>
+                    <strong>Add Crops:</strong> Start by adding the crops you're
+                    growing or planning to grow. Specify the crop name, planting
+                    date, field location, and any notes.
+                  </li>
+                  <li>
+                    <strong>View Calendar:</strong> The calendar view shows all
+                    your farming activities organized by date. You can see
+                    planting, fertilization, irrigation, and harvesting
+                    schedules at a glance.
+                  </li>
+                  <li>
+                    <strong>Manage Tasks:</strong> Add specific tasks for each
+                    crop, set priorities, and track completion status.
+                  </li>
+                  <li>
+                    <strong>Get Notifications:</strong> The system will notify
+                    you about upcoming tasks and important activities.
+                  </li>
+                  <li>
+                    <strong>Track Progress:</strong> Monitor your farm
+                    activities and make adjustments as needed.
+                  </li>
+                </ol>
+                <p>
+                  The Farm Planner helps you stay organized and ensures you
+                  don't miss critical farming activities.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Can I plan for multiple fields or farms?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, you can plan for multiple fields or farms using our Farm
+                  Planner. When adding a crop, you can specify different field
+                  locations. You can also create separate farm profiles if you
+                  manage multiple farms. The planner allows you to:
+                </p>
+                <ul>
+                  <li>Organize tasks by field or farm</li>
+                  <li>
+                    View activities for specific fields or all fields together
+                  </li>
+                  <li>Track inputs and outputs for each field separately</li>
+                  <li>
+                    Generate reports for individual fields or the entire farm
+                  </li>
+                </ul>
+                <p>
+                  This feature is particularly useful for farmers managing
+                  diverse cropping systems or multiple land parcels.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Is my farm data saved if I close the browser?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, your farm data is saved locally on your device even if
+                  you close the browser. However, for the best experience and to
+                  ensure your data is backed up, we recommend:
+                </p>
+                <ul>
+                  <li>Creating an account to sync your data across devices</li>
+                  <li>
+                    Regularly using the same device if you choose not to create
+                    an account
+                  </li>
+                  <li>
+                    Not clearing your browser cache or cookies if you haven't
+                    created an account
+                  </li>
+                </ul>
+                <p>
+                  With an account, you can access your farm planner from any
+                  device, and your data will be securely stored on our servers.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Can I export my farm plan or share it with others?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>Yes, you can export your farm plan in several formats:</p>
+                <ul>
+                  <li>PDF document for printing or sharing</li>
+                  <li>Excel spreadsheet for further analysis</li>
+                  <li>
+                    Calendar format (.ics) to import into Google Calendar,
+                    Outlook, or other calendar apps
+                  </li>
+                </ul>
+                <p>
+                  You can also share your farm plan directly with family members
+                  or farm workers by inviting them via email. This allows for
+                  collaborative farm management where multiple people can view
+                  and update the farm plan as needed.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Government Schemes FAQs -->
+          <div class="faq-category" data-category="schemes">
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>How up-to-date is the government scheme information?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  We update our government scheme information regularly to
+                  ensure accuracy. Our team monitors official government
+                  announcements, agricultural ministry websites, and official
+                  gazettes to keep the information current. Each scheme listing
+                  includes the last updated date so you can see when the
+                  information was last verified.
+                </p>
+                <p>
+                  However, government policies can change rapidly. We recommend
+                  always cross-checking critical information with official
+                  government sources before making any significant decisions
+                  based on scheme details.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Can Smart Farming help me apply for government schemes?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  While we don't directly process applications, Smart Farming
+                  provides comprehensive guidance on applying for government
+                  schemes:
+                </p>
+                <ul>
+                  <li>Detailed eligibility criteria for each scheme</li>
+                  <li>Step-by-step application procedures</li>
+                  <li>Lists of required documents</li>
+                  <li>Application deadlines</li>
+                  <li>Direct links to official application portals</li>
+                  <li>Contact information for relevant government offices</li>
+                </ul>
+                <p>
+                  For premium users, we also offer personalized assistance
+                  through our support team who can guide you through the
+                  application process for specific schemes.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>Are state-specific schemes included in your database?</h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, our database includes both central government schemes and
+                  state-specific agricultural schemes for all 28 states and 8
+                  union territories of India. You can filter schemes by:
+                </p>
+                <ul>
+                  <li>Central vs. state schemes</li>
+                  <li>Specific states or regions</li>
+                  <li>Scheme categories (subsidies, loans, insurance, etc.)</li>
+                  <li>
+                    Target beneficiaries (small farmers, women farmers, tribal
+                    farmers, etc.)
+                  </li>
+                </ul>
+                <p>
+                  We prioritize adding new state schemes as they are announced
+                  and updating existing scheme information regularly.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3>
+                  How do I know which government schemes I'm eligible for?
+                </h3>
+                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Smart Farming offers an eligibility checker tool that helps
+                  you identify schemes you may qualify for. To use this tool:
+                </p>
+                <ol>
+                  <li>
+                    Create an account and complete your farmer profile with
+                    details like land holding size, farmer category, crops
+                    grown, etc.
+                  </li>
+                  <li>Navigate to the Government Schemes section</li>
+                  <li>Click on "Check My Eligibility"</li>
+                  <li>
+                    Review the list of schemes you potentially qualify for,
+                    sorted by relevance
+                  </li>
+                </ol>
+                <p>
+                  The tool analyzes your profile against the eligibility
+                  criteria of various schemes to provide personalized
+                  recommendations. However, final eligibility determination is
+                  always made by the implementing government agency.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="noFaqResults" class="no-results" style="display: none">
+          <i class="fas fa-search"></i>
+          <p>
+            No matching questions found. Try a different search term or browse
+            by category.
+          </p>
+          <button id="resetFaqSearch" class="reset-btn">Reset Search</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Still Have Questions Section -->
+    <section class="still-questions">
+      <div class="container">
+        <div class="questions-content">
+          <h2>Still Have Questions?</h2>
+          <p>
+            If you couldn't find the answer you were looking for, please feel
+            free to contact us directly.
+          </p>
+          <div class="contact-options">
+            <a href="contact.html" class="contact-btn">
+              <i class="fas fa-envelope"></i>
+              Contact Us
+            </a>
+            <a href="tel:+919876543210" class="contact-btn">
+              <i class="fas fa-phone"></i>
+              Call Support
+            </a>
+            <a href="https://wa.me/919876543210" class="contact-btn">
+              <i class="fab fa-whatsapp"></i>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Smart<span>Farm</span></h2>
+            <p>
+              Empowering farmers with technology and knowledge for sustainable
+              agriculture
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="weather.html">Weather</a></li>
+              <li><a href="soil-info.html">Soil Info</a></li>
+              <li><a href="crop-recommendation.html">Crop Guide</a></li>
+              <li><a href="farm-planner.html">Farm Planner</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-resources">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="government-schemes.html">Government Schemes</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@smartfarm.in</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 SmartFarm. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/faq.js"></script>
+  </body>
+</html>

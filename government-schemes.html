@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Government Schemes - Smart Farming</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/government-schemes.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Smart<span>Farm</span></h1>
+        </div>
+        <nav>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="soil-info.html">Soil Info</a></li>
+            <li><a href="crop-recommendation.html">Crop Guide</a></li>
+            <li><a href="farm-planner.html">Farm Planner</a></li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                >More <i class="fas fa-chevron-down"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="government-schemes.html" class="active"
+                    >Govt. Schemes</a
+                  >
+                </li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <h1>Government Schemes</h1>
+        <p>
+          Explore agricultural schemes and programs to support your farming
+          activities
+        </p>
+      </div>
+    </section>
+
+    <!-- Schemes Filter Section -->
+    <section class="schemes-filter">
+      <div class="container">
+        <div class="filter-container">
+          <div class="search-box">
+            <input
+              type="text"
+              id="schemeSearch"
+              placeholder="Search schemes..."
+            />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div class="filter-options">
+            <select id="categoryFilter">
+              <option value="all">All Categories</option>
+              <option value="financial">Financial Support</option>
+              <option value="insurance">Insurance</option>
+              <option value="irrigation">Irrigation</option>
+              <option value="organic">Organic Farming</option>
+              <option value="technology">Technology</option>
+              <option value="marketing">Marketing</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schemes List Section -->
+    <section class="schemes-list">
+      <div class="container">
+        <div class="schemes-container">
+          <!-- PM-KISAN Scheme -->
+          <div class="scheme-card" data-category="financial">
+            <div class="scheme-header">
+              <div class="scheme-logo">
+                <img src="images/pm-kisan-logo.jpg" alt="PM-KISAN Logo" />
+              </div>
+              <div class="scheme-title">
+                <h3>PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)</h3>
+                <div class="scheme-tags">
+                  <span class="tag financial">Financial Support</span>
+                  <span class="tag central">Central Scheme</span>
+                </div>
+              </div>
+              <div class="scheme-toggle">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="scheme-content">
+              <div class="scheme-description">
+                <p>
+                  PM-KISAN is a central sector scheme to provide income support
+                  to all landholding farmers' families in the country to
+                  supplement their financial needs for procuring various inputs
+                  related to agriculture and allied activities as well as
+                  domestic needs.
+                </p>
+              </div>
+              <div class="scheme-details">
+                <div class="detail-item">
+                  <h4><i class="fas fa-rupee-sign"></i> Benefits</h4>
+                  <p>
+                    ₹6,000 per year in three equal installments of ₹2,000 each,
+                    every four months directly into the bank accounts of
+                    eligible farmer families.
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-user-check"></i> Eligibility</h4>
+                  <ul>
+                    <li>
+                      All landholding farmers' families with cultivable
+                      landholding in their names.
+                    </li>
+                    <li>
+                      Small and Marginal Farmers (SMF) with combined landholding
+                      up to 2 hectares.
+                    </li>
+                    <li>
+                      Farmers with larger landholdings also eligible as per
+                      revised guidelines.
+                    </li>
+                  </ul>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-file-alt"></i> Required Documents</h4>
+                  <ul>
+                    <li>Aadhaar Card</li>
+                    <li>Land Records</li>
+                    <li>Bank Account Details</li>
+                    <li>KYC Documents</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="scheme-actions">
+                <a
+                  href="https://pmkisan.gov.in/"
+                  target="_blank"
+                  class="btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Official Website</a
+                >
+                <a href="#" class="btn-secondary"
+                  ><i class="fas fa-download"></i> Download Guidelines</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- PMFBY Scheme -->
+          <div class="scheme-card" data-category="insurance">
+            <div class="scheme-header">
+              <div class="scheme-logo">
+                <img src="images/pmfby-logo.jpg" alt="PMFBY Logo" />
+              </div>
+              <div class="scheme-title">
+                <h3>PMFBY (Pradhan Mantri Fasal Bima Yojana)</h3>
+                <div class="scheme-tags">
+                  <span class="tag insurance">Insurance</span>
+                  <span class="tag central">Central Scheme</span>
+                </div>
+              </div>
+              <div class="scheme-toggle">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="scheme-content">
+              <div class="scheme-description">
+                <p>
+                  PMFBY is a crop insurance scheme that aims to reduce the
+                  premium burden on farmers and ensure early settlement of crop
+                  assurance claims for the full insured sum.
+                </p>
+              </div>
+              <div class="scheme-details">
+                <div class="detail-item">
+                  <h4><i class="fas fa-shield-alt"></i> Coverage</h4>
+                  <p>
+                    Comprehensive risk insurance to cover yield losses due to
+                    non-preventable risks such as natural fire and lightning,
+                    storm, hailstorm, cyclone, typhoon, tempest, hurricane,
+                    tornado, flood, inundation, drought, dry spells, pests and
+                    diseases.
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-rupee-sign"></i> Premium Rates</h4>
+                  <ul>
+                    <li>Kharif crops: 2% of sum insured</li>
+                    <li>Rabi crops: 1.5% of sum insured</li>
+                    <li>
+                      Annual commercial/horticultural crops: 5% of sum insured
+                    </li>
+                  </ul>
+                  <p>
+                    The balance premium will be paid by the government as
+                    subsidy.
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-user-check"></i> Eligibility</h4>
+                  <ul>
+                    <li>
+                      All farmers including sharecroppers and tenant farmers
+                      growing notified crops in notified areas.
+                    </li>
+                    <li>Voluntary for non-loanee farmers.</li>
+                    <li>
+                      Compulsory for loanee farmers availing Seasonal
+                      Agricultural Operations (SAO) loans from financial
+                      institutions.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="scheme-actions">
+                <a
+                  href="https://pmfby.gov.in/"
+                  target="_blank"
+                  class="btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Official Website</a
+                >
+                <a href="#" class="btn-secondary"
+                  ><i class="fas fa-download"></i> Download Guidelines</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- PMKSY Scheme -->
+          <div class="scheme-card" data-category="irrigation">
+            <div class="scheme-header">
+              <div class="scheme-logo">
+                <img src="images/pmksy-logo.jpg" alt="PMKSY Logo" />
+              </div>
+              <div class="scheme-title">
+                <h3>PMKSY (Pradhan Mantri Krishi Sinchayee Yojana)</h3>
+                <div class="scheme-tags">
+                  <span class="tag irrigation">Irrigation</span>
+                  <span class="tag central">Central Scheme</span>
+                </div>
+              </div>
+              <div class="scheme-toggle">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="scheme-content">
+              <div class="scheme-description">
+                <p>
+                  PMKSY is a national mission to improve farm productivity and
+                  ensure better utilization of water resources. The scheme
+                  focuses on creating sources for assured irrigation and
+                  adopting precision irrigation technologies.
+                </p>
+              </div>
+              <div class="scheme-details">
+                <div class="detail-item">
+                  <h4><i class="fas fa-water"></i> Components</h4>
+                  <ul>
+                    <li>
+                      <strong
+                        >Accelerated Irrigation Benefit Programme
+                        (AIBP):</strong
+                      >
+                      Focuses on faster completion of ongoing major and medium
+                      irrigation projects.
+                    </li>
+                    <li>
+                      <strong>Har Khet Ko Pani:</strong> Creation of new water
+                      sources through minor irrigation, repair, restoration, and
+                      renovation of traditional water bodies.
+                    </li>
+                    <li>
+                      <strong>Per Drop More Crop:</strong> Promotion of
+                      micro-irrigation (drip and sprinkler irrigation).
+                    </li>
+                    <li>
+                      <strong>Watershed Development:</strong> Effective
+                      management of runoff water and improved soil & moisture
+                      conservation activities.
+                    </li>
+                  </ul>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-rupee-sign"></i> Subsidy</h4>
+                  <p>
+                    Up to 55% subsidy for small and marginal farmers and 45% for
+                    other farmers for installing micro-irrigation systems like
+                    drip and sprinkler irrigation.
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-user-check"></i> Eligibility</h4>
+                  <p>
+                    All farmers are eligible to apply for the scheme benefits.
+                    Priority is given to small and marginal farmers.
+                  </p>
+                </div>
+              </div>
+              <div class="scheme-actions">
+                <a
+                  href="https://pmksy.gov.in/"
+                  target="_blank"
+                  class="btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Official Website</a
+                >
+                <a href="#" class="btn-secondary"
+                  ><i class="fas fa-download"></i> Download Guidelines</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- PKVY Scheme -->
+          <div class="scheme-card" data-category="organic">
+            <div class="scheme-header">
+              <div class="scheme-logo">
+                <img src="images/pkvy-logo.jpg" alt="PKVY Logo" />
+              </div>
+              <div class="scheme-title">
+                <h3>PKVY (Paramparagat Krishi Vikas Yojana)</h3>
+                <div class="scheme-tags">
+                  <span class="tag organic">Organic Farming</span>
+                  <span class="tag central">Central Scheme</span>
+                </div>
+              </div>
+              <div class="scheme-toggle">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="scheme-content">
+              <div class="scheme-description">
+                <p>
+                  PKVY is a scheme to promote organic farming in India. It
+                  encourages farmers to adopt eco-friendly concept of
+                  cultivation reducing dependency on fertilizers and
+                  agricultural chemicals to improve soil health.
+                </p>
+              </div>
+              <div class="scheme-details">
+                <div class="detail-item">
+                  <h4><i class="fas fa-leaf"></i> Benefits</h4>
+                  <ul>
+                    <li>
+                      Financial assistance for setting up organic farming units.
+                    </li>
+                    <li>Support for obtaining organic certification.</li>
+                    <li>Training on organic farming practices.</li>
+                    <li>Marketing assistance for organic produce.</li>
+                  </ul>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-rupee-sign"></i> Financial Support</h4>
+                  <p>
+                    ₹50,000 per hectare for a three-year period for adopting
+                    organic farming. This includes ₹31,000 as incentive to
+                    farmers, ₹11,500 for inputs, and ₹7,500 for infrastructure
+                    development.
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-users"></i> Implementation</h4>
+                  <p>
+                    The scheme is implemented in a cluster approach, with each
+                    cluster comprising 50 acres. Farmers in a cluster work
+                    together and implement organic farming collectively.
+                  </p>
+                </div>
+              </div>
+              <div class="scheme-actions">
+                <a
+                  href="https://pgsindia-ncof.gov.in/pkvy/index.aspx"
+                  target="_blank"
+                  class="btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Official Website</a
+                >
+                <a href="#" class="btn-secondary"
+                  ><i class="fas fa-download"></i> Download Guidelines</a
+                >
+              </div>
+            </div>
+          </div>
+          
+          <!-- e-NAM Scheme -->
+          <div class="scheme-card" data-category="marketing">
+            <div class="scheme-header">
+              <div class="scheme-logo">
+                <img src="images/enam-logo.jpg" alt="e-NAM Logo" />
+              </div>
+              <div class="scheme-title">
+                <h3>e-NAM (Electronic National Agriculture Market)</h3>
+                <div class="scheme-tags">
+                  <span class="tag marketing">Marketing</span>
+                  <span class="tag central">Central Scheme</span>
+                </div>
+              </div>
+              <div class="scheme-toggle">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="scheme-content">
+              <div class="scheme-description">
+                <p>
+                  e-NAM is a pan-India electronic trading portal that networks
+                  existing APMC mandis to create a unified national market for
+                  agricultural commodities. It helps farmers sell their produce
+                  online to get better prices through transparent auction
+                  process.
+                </p>
+              </div>
+              <div class="scheme-details">
+                <div class="detail-item">
+                  <h4><i class="fas fa-shopping-cart"></i> Features</h4>
+                  <ul>
+                    <li>
+                      Online trading platform for agricultural commodities.
+                    </li>
+                    <li>
+                      Transparent price discovery through competitive bidding.
+                    </li>
+                    <li>Real-time price information to farmers.</li>
+                    <li>Online payment facility.</li>
+                    <li>Reduced market fees and intermediaries.</li>
+                  </ul>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-mobile-alt"></i> How to Access</h4>
+                  <p>
+                    Farmers can register on the e-NAM portal or mobile app with
+                    the help of local mandi officials. They can bring their
+                    produce to the nearest e-NAM integrated APMC mandi for
+                    quality assaying and online trading.
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-map-marker-alt"></i> Coverage</h4>
+                  <p>
+                    Currently, over 1,000 mandis across India are integrated
+                    with the e-NAM platform, with plans to add more mandis in
+                    the future.
+                  </p>
+                </div>
+              </div>
+              <div class="scheme-actions">
+                <a
+                  href="https://enam.gov.in/"
+                  target="_blank"
+                  class="btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Official Website</a
+                >
+                <a href="#" class="btn-secondary"
+                  ><i class="fas fa-download"></i> Download Guidelines</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- RKVY Scheme -->
+          <div class="scheme-card" data-category="financial">
+            <div class="scheme-header">
+              <div class="scheme-logo">
+                <img src="images/rkvy-logo.jpg" alt="RKVY Logo" />
+              </div>
+              <div class="scheme-title">
+                <h3>RKVY (Rashtriya Krishi Vikas Yojana)</h3>
+                <div class="scheme-tags">
+                  <span class="tag financial">Financial Support</span>
+                  <span class="tag central">Central Scheme</span>
+                </div>
+              </div>
+              <div class="scheme-toggle">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="scheme-content">
+              <div class="scheme-description">
+                <p>
+                  RKVY is a state plan scheme that aims to incentivize states to
+                  increase public investment in agriculture and allied sectors.
+                  It provides flexibility and autonomy to states in planning and
+                  executing agriculture and allied sector schemes.
+                </p>
+              </div>
+              <div class="scheme-details">
+                <div class="detail-item">
+                  <h4><i class="fas fa-list-ul"></i> Focus Areas</h4>
+                  <ul>
+                    <li>Crop development.</li>
+                    <li>Horticulture development.</li>
+                    <li>Agricultural mechanization.</li>
+                    <li>Natural resource management.</li>
+                    <li>Marketing and post-harvest management.</li>
+                    <li>Animal husbandry, dairy, and fisheries.</li>
+                    <li>Extension and research.</li>
+                  </ul>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-cogs"></i> Implementation</h4>
+                  <p>
+                    States can use RKVY funds to implement projects in the focus
+                    areas based on their agricultural needs and priorities. The
+                    scheme follows a project-based approach with 60:40 funding
+                    pattern between Center and States (90:10 for North-Eastern
+                    and Himalayan States).
+                  </p>
+                </div>
+                <div class="detail-item">
+                  <h4><i class="fas fa-user-check"></i> Eligibility</h4>
+                  <p>
+                    All farmers can benefit from the scheme through various
+                    projects implemented by the state governments. The specific
+                    eligibility criteria may vary depending on the project.
+                  </p>
+                </div>
+              </div>
+              <div class="scheme-actions">
+                <a
+                  href="https://rkvy.nic.in/"
+                  target="_blank"
+                  class="btn-primary"
+                  ><i class="fas fa-external-link-alt"></i> Official Website</a
+                >
+                <a href="#" class="btn-secondary"
+                  ><i class="fas fa-download"></i> Download Guidelines</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="no-results" style="display: none">
+          <i class="fas fa-search"></i>
+          <h3>No schemes found</h3>
+          <p>Try adjusting your search or filter criteria</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scheme Application Process Section -->
+    <section class="application-process">
+      <div class="container">
+        <h2 class="section-title">How to Apply for Government Schemes</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Check Eligibility</h3>
+              <p>
+                Review the eligibility criteria for the scheme you're interested
+                in. Make sure you meet all the requirements before proceeding.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Gather Documents</h3>
+              <p>
+                Collect all necessary documents such as Aadhaar card, land
+                records, bank account details, and other scheme-specific
+                requirements.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Visit Local Office</h3>
+              <p>
+                Visit your nearest Agriculture Department office, Krishi Vigyan
+                Kendra, or Common Service Center for assistance with the
+                application process.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Submit Application</h3>
+              <p>
+                Fill out the application form and submit it along with the
+                required documents. You can apply online through the scheme's
+                official website or offline at designated centers.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Track Application</h3>
+              <p>
+                Keep track of your application status using the reference number
+                provided during submission. Follow up with the concerned
+                authorities if needed.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="application-note">
+          <p>
+            <i class="fas fa-info-circle"></i> <strong>Note:</strong> The
+            application process may vary slightly for different schemes. Always
+            refer to the official guidelines or consult with local agricultural
+            officers for scheme-specific application procedures.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Smart<span>Farm</span></h2>
+            <p>
+              Empowering farmers with technology and knowledge for sustainable
+              agriculture
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="weather.html">Weather</a></li>
+              <li><a href="soil-info.html">Soil Info</a></li>
+              <li><a href="crop-recommendation.html">Crop Guide</a></li>
+              <li><a href="farm-planner.html">Farm Planner</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-resources">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="government-schemes.html">Government Schemes</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@smartfarm.in</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 SmartFarm. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/government-schemes.js"></script>
+  </body>
+</html>

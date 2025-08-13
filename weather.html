@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast - Smart Farming</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/weather.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Smart<span>Farm</span></h1>
+        </div>
+        <nav>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html" class="active">Weather</a></li>
+            <li><a href="soil-info.html">Soil Info</a></li>
+            <li><a href="crop-recommendation.html">Crop Guide</a></li>
+            <li><a href="farm-planner.html">Farm Planner</a></li>
+            <li class="dropdown">
+              <a href="#">More <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="government-schemes.html">Govt. Schemes</a></li>
+                <li><a href="fertilizer-guide.html">Fertilizer Guide</a></li>
+                <li><a href="market-price.html">Market Prices</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <h1>Weather Forecast</h1>
+        <p>
+          Get accurate weather information to plan your farming activities
+          effectively
+        </p>
+      </div>
+    </section>
+
+    <!-- Weather Search Section -->
+    <section class="weather-search">
+      <div class="container">
+        <div class="search-container">
+          <h2>Select a region to view weather information</h2>
+          <div class="search-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="locationInput"
+                placeholder="Enter city name or PIN code"
+              />
+            </div>
+            <button id="searchBtn" class="btn btn-primary">
+              <i class="fas fa-search"></i> Get Weather
+            </button>
+          </div>
+          <div class="location-options">
+            <p>Popular Locations:</p>
+            <div class="location-buttons">
+              <button class="location-btn" data-location="Delhi">Delhi</button>
+              <button class="location-btn" data-location="Mumbai">
+                Mumbai
+              </button>
+              <button class="location-btn" data-location="Kolkata">
+                Kolkata
+              </button>
+              <button class="location-btn" data-location="Chennai">
+                Chennai
+              </button>
+              <button class="location-btn" data-location="Bangalore">
+                Bangalore
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather Results Section -->
+    <section class="weather-results" id="weatherResults">
+      <div class="container">
+        <div
+          class="weather-container"
+          id="weatherContainer"
+          style="display: none"
+        >
+          <div class="current-weather">
+            <div class="weather-header">
+              <div class="location-info">
+                <h2 id="locationName">City Name</h2>
+                <p id="currentDate">Date</p>
+              </div>
+              <div class="weather-icon">
+                <img id="weatherIcon" src="" alt="Weather Icon" />
+              </div>
+            </div>
+
+            <div class="weather-details">
+              <div class="temperature">
+                <h3 id="temperature">--°C</h3>
+                <p id="weatherDescription">Weather Description</p>
+              </div>
+
+              <div class="weather-stats">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fas fa-tint"></i>
+                  </div>
+                  <div class="stat-info">
+                    <p>Humidity</p>
+                    <h4 id="humidity">--%</h4>
+                  </div>
+                </div>
+
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fas fa-wind"></i>
+                  </div>
+                  <div class="stat-info">
+                    <p>Wind Speed</p>
+                    <h4 id="windSpeed">-- km/h</h4>
+                  </div>
+                </div>
+
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fas fa-cloud-rain"></i>
+                  </div>
+                  <div class="stat-info">
+                    <p>Precipitation</p>
+                    <h4 id="precipitation">-- mm</h4>
+                  </div>
+                </div>
+
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fas fa-sun"></i>
+                  </div>
+                  <div class="stat-info">
+                    <p>UV Index</p>
+                    <h4 id="uvIndex">--</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="farming-tips">
+            <h3>Farming Tips Based on Weather</h3>
+            <div class="tips-container" id="farmingTips">
+              <!-- Tips will be added dynamically via JavaScript -->
+            </div>
+          </div>
+
+          <div class="forecast">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast-container" id="forecastContainer">
+              <!-- Forecast will be added dynamically via JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <div class="error-message" id="errorMessage" style="display: none">
+          <div class="error-icon">
+            <i class="fas fa-exclamation-circle"></i>
+          </div>
+          <h3>Oops! Something went wrong</h3>
+          <p id="errorText">Unable to fetch weather data. Please try again.</p>
+          <button id="retryBtn" class="btn btn-primary">Try Again</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather Information Section -->
+    <section class="weather-info">
+      <div class="container">
+        <h2 class="section-title">Weather & Farming</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-cloud-sun-rain"></i>
+            </div>
+            <h3>Weather Monitoring</h3>
+            <p>
+              Regular weather monitoring helps farmers plan their activities
+              effectively and prepare for adverse conditions.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Crop Selection</h3>
+            <p>
+              Weather patterns play a crucial role in determining which crops
+              will thrive in specific regions and seasons.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-tint"></i>
+            </div>
+            <h3>Irrigation Planning</h3>
+            <p>
+              Accurate rainfall forecasts help optimize irrigation schedules,
+              saving water and improving crop yield.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-bug"></i>
+            </div>
+            <h3>Pest Management</h3>
+            <p>
+              Weather conditions influence pest and disease outbreaks. Timely
+              forecasts help implement preventive measures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Smart<span>Farm</span></h2>
+            <p>
+              Empowering farmers with technology and knowledge for sustainable
+              agriculture
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="weather.html">Weather</a></li>
+              <li><a href="soil-info.html">Soil Info</a></li>
+              <li><a href="crop-recommendation.html">Crop Guide</a></li>
+              <li><a href="farm-planner.html">Farm Planner</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-resources">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="government-schemes.html">Government Schemes</a></li>
+              <li><a href="fertilizer-guide.html">Fertilizer Guide</a></li>
+              <li><a href="market-price.html">Market Prices</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@smartfarm.in</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 SmartFarm. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>
